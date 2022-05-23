@@ -67,8 +67,8 @@
     .skillsGrid > div {
         align-self: center;
         padding: 5%;
+        display: none;
     }
-
 </style>
 <div class="row justify-content-center vh-100">
     <div class="aboutTextCol fadeGrow col-md-6 col-11 my-auto order-1 order-md-0">
@@ -95,7 +95,7 @@
 </div>
 <div class="row vh-100">
     <div class="col-12 my-auto">
-        <div class="skillsGrid">
+        <div class="skillsGrid text-center">
             <div class="skillsGrid-a">
                 <h1>
                     <i class="fa fa-code"></i>
@@ -118,27 +118,26 @@
             </div>
             <div class="skillsGrid-e">
                 <h1>
-                    <i class="fa-solid fa-brackets-curly"></i>
+                    .NET
                 </h1>
             </div>
             <div class="skillsGrid-f">
-                <h2>
-                    .NET
-                </h2>
-            </div>
-            <div class="skillsGrid-g">
                 <h1>
                     <i class="fa-solid fa-database"></i>
                 </h1>
             </div>
-            <div class="skillsGrid-h">
-                <h1>
-                    <i class="fa-solid fa-laptop-mobile"></i>
-                </h1>
-            </div>
-            <div class="skillsGrid-i">
-
-            </div>
         </div>
     </div>
 </div>
+@section Scripts
+{
+    <script type="text/javascript">
+        var skillsGridItems = document.querySelectorAll(".skillsGrid div");
+
+        skillsGridItems.forEach(function (gridItem, index) {
+            setTimeout(function () {
+                $(gridItem).fadeIn();
+            }, index * 500);
+        });
+    </script>
+}
