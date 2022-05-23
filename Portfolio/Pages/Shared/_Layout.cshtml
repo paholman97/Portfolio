@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Peter Holman - Full Stack Developer Portfolio" />
+    <title>Peter Holman - Full Stack Developer</title>
+    <link rel="stylesheet" href="/css/bundle.css" />
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background-color: #383838;
+            opacity: 0.8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #ccff00;
+            border-radius: 20px;
+        }
+            ::-webkit-scrollbar-thumb:hover {
+                background: #b5b5b5;
+            }
+        body,
+        .stickyHeader {
+            background-color: #383838;
+            color: #ccff00;
+        }
+        .stickyHeader {
+            position: fixed;
+            top: 0;
+            z-index: 1;
+            width: 100%;
+            padding: 1%;
+        }
+        a {
+            text-decoration: none;
+            color: #ccff00!important;
+            margin: 2px;
+        }
+        .topLink {
+            font-size: 1.5rem;
+            transition: 0.1s;
+        }
+            .topLink:hover {
+                transform: scale(1.2);
+                transition: 0.1s;
+            }
+    </style>
+</head>
+<body>
+    <div class="stickyHeader">
+        <a href="mailto:peterholman97@hotmail.co.uk">
+            <i class="fa fa-envelope topLink"></i>
+        </a>
+        <a href="https://www.facebook.com/peter.holman3/" target="_blank">
+            <i class="fab fa-facebook topLink"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/peter-holman-110830231/" target="_blank">
+            <i class="fab fa-linkedin topLink"></i>
+        </a>
+        <a href="https://github.com/paholman97" target="_blank">
+            <i class="fab fa-github topLink"></i>
+        </a>
+    </div>
+    <div class="container position-relative">
+        @RenderBody()
+    </div>
+    <script src="/js/bundle.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

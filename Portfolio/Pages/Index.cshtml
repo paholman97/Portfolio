@@ -1,0 +1,144 @@
+﻿@page
+@model IndexModel
+<style>
+    .aboutTextCol {
+        border-radius: 5px;
+        border-left: 1px solid #ccff00;
+    }
+    .imgRounded {
+        height: 500px;
+        width: 500px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+    @@media (max-width: 1200px) {
+        .imgRounded {
+            height: 450px;
+            width: 450px;
+        }
+    }
+    @@media (max-width: 992px) {
+        .imgRounded {
+            height: 350px;
+            width: 350px;
+        }
+    }
+    @@media (max-width: 576px) {
+        .imgRounded {
+            height: 300px;
+            width: 300px;
+        }
+    }
+
+    @@keyframes fadeGrow {
+        0% {
+            transform: scale(0.9);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    .fadeGrow {
+        animation: fadeGrow 1.5s;
+    }
+
+    @@keyframes fadeShrink {
+        0% {
+            transform: scale(1.1);
+            opacity: 0;
+        }
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    .fadeShrink {
+        animation: fadeShrink 1.5s;
+    }
+
+    .skillsGrid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    .skillsGrid > div {
+        align-self: center;
+        padding: 5%;
+    }
+
+</style>
+<div class="row justify-content-center vh-100">
+    <div class="aboutTextCol fadeGrow col-md-6 col-11 my-auto order-1 order-md-0">
+        <h1>Peter Holman</h1>
+        <h2>Full Stack Developer</h2>
+        <p class="text-white">
+            text here text here text here text here
+            text here text here text here text here
+            text here text here text here text here
+            text here text here text here text here
+            text here text here text here text here
+            text here text here text here text here
+            text here text here text here text here
+            text here text here text here text here
+            text here text here text here text here
+            text here text here text here text here
+            text here text here text here text here
+            text here text here text here text here
+        </p>
+    </div>
+    <div class="fadeShrink col-md-6 my-md-auto mt-auto text-center order-0 order-md-1">
+        <img class="imgRounded" src="~/Images/ProfileImg.webp" alt="profileImg" />
+    </div>
+</div>
+<div class="row vh-100">
+    <div class="col-12 my-auto">
+        <div class="skillsGrid">
+            <div class="skillsGrid-a">
+                <h1>
+                    <i class="fa fa-code"></i>
+                </h1>
+            </div>
+            <div class="skillsGrid-b">
+                <h1>
+                    <i class="fa-brands fa-css3"></i>
+                </h1>
+            </div>
+            <div class="skillsGrid-c">
+                <h1>
+                    <i class="fa-brands fa-js"></i>
+                </h1>
+            </div>
+            <div class="skillsGrid-d">
+                <h1>
+                    <i class="fa-brands fa-bootstrap"></i>
+                </h1>            
+            </div>
+            <div class="skillsGrid-e">
+                <h1>
+                    <i class="fa-solid fa-brackets-curly"></i>
+                </h1>
+            </div>
+            <div class="skillsGrid-f">
+                <h2>
+                    .NET
+                </h2>
+            </div>
+            <div class="skillsGrid-g">
+                <h1>
+                    <i class="fa-solid fa-database"></i>
+                </h1>
+            </div>
+            <div class="skillsGrid-h">
+                <h1>
+                    <i class="fa-solid fa-laptop-mobile"></i>
+                </h1>
+            </div>
+            <div class="skillsGrid-i">
+
+            </div>
+        </div>
+    </div>
+</div>
